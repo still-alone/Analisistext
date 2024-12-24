@@ -1,0 +1,235 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes. Error detail: AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   This process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:44), pid=20628, tid=10648
+#
+# JRE version:  (23.0.1+11) (build )
+# Java VM: OpenJDK 64-Bit Server VM (23.0.1+11-39, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:57151,suspend=y,server=n -agentpath:C:\Users\grach\AppData\Local\Temp\idea_libasyncProfiler_dll_temp_folder\libasyncProfiler.dll=version,jfr,event=wall,interval=10ms,cstack=no,file=C:\Users\grach\IdeaSnapshots\TextAnalysis_2024_12_24_002014.jfr,dbghelppath=C:\Users\grach\AppData\Local\Temp\idea_dbghelp_dll_temp_folder\dbghelp.dll,log=C:\Users\grach\AppData\Local\Temp\TextAnalysis_2024_12_24_002014.jfr.log.txt,logLevel=DEBUG -javaagent:C:\Users\grach\AppData\Local\JetBrains\IntelliJIdea2024.3\captureAgent\debugger-agent.jar=file:/C:/Users/grach/AppData/Local/Temp/capture.props -Dkotlinx.coroutines.debug.enable.creation.stack.trace=false -Ddebugger.agent.enable.coroutines=true -Dkotlinx.coroutines.debug.enable.flows.stack.trace=true -Dkotlinx.coroutines.debug.enable.mutable.state.flows.stack.trace=true -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 org.example.TextAnalysis
+
+Host: Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz, 12 cores, 15G,  Windows 10 , 64 bit Build 19041 (10.0.19041.5198)
+Time: Tue Dec 24 00:20:15 2024 RTZ 2 (s 10 , 64 bit Build 19041 (10.0.19041.5198) elapsed time: 0.180305 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000028c78ba4c50):  JavaThread "Unknown thread" [_thread_in_vm, id=10648, stack(0x000000f27e400000,0x000000f27e500000) (1024K)]
+
+Stack: [0x000000f27e400000,0x000000f27e500000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6e08b9]  (no source info available)
+V  [jvm.dll+0x87dc83]  (no source info available)
+V  [jvm.dll+0x88010e]  (no source info available)
+V  [jvm.dll+0x8807e3]  (no source info available)
+V  [jvm.dll+0x27aee6]  (no source info available)
+V  [jvm.dll+0xb6a17]  (no source info available)
+V  [jvm.dll+0x326ad8]  (no source info available)
+V  [jvm.dll+0x844319]  (no source info available)
+V  [jvm.dll+0x3b9848]  (no source info available)
+V  [jvm.dll+0x82d14c]  (no source info available)
+V  [jvm.dll+0x454d4e]  (no source info available)
+V  [jvm.dll+0x456bd1]  (no source info available)
+C  [jli.dll+0x52a3]  (no source info available)
+C  [ucrtbase.dll+0x21bb2]  (no source info available)
+C  [KERNEL32.DLL+0x17374]  (no source info available)
+C  [ntdll.dll+0x4cc91]  (no source info available)
+
+Lock stack of current Java thread (top to bottom):
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffd69d43618, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+Total: 0
+
+Other Threads:
+
+=>0x0000028c78ba4c50 (exited) JavaThread "Unknown thread"    [_thread_in_vm, id=10648, stack(0x000000f27e400000,0x000000f27e500000) (1024K)]
+Total: 1
+
+Threads with active compile tasks:
+Total: 0
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000000000000, size: 0 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 4 size 8 Array Of Cards #cards 16 size 48 Howl #buckets 8 coarsen threshold 3686 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 4096
+
+GC Heap History (0 events):
+No events
+
+Dll operation events (2 events):
+Event: 0.177 Loaded shared library D:\jdk-23.0.1\bin\java.dll
+Event: 0.178 Loaded shared library D:\jdk-23.0.1\bin\zip.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Memory protections (0 events):
+No events
+
+Nmethod flushes (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff726790000 - 0x00007ff72679e000 	D:\jdk-23.0.1\bin\java.exe
+0x00007ffdfbe70000 - 0x00007ffdfc068000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffdfaef0000 - 0x00007ffdfafb2000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffdf9660000 - 0x00007ffdf995e000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffdf5580000 - 0x00007ffdf5614000 	C:\WINDOWS\SYSTEM32\apphelp.dll
+0x00007ffdf9ce0000 - 0x00007ffdf9de0000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffdbe4e0000 - 0x00007ffdbe4f7000 	D:\jdk-23.0.1\bin\jli.dll
+0x00007ffdbe4c0000 - 0x00007ffdbe4db000 	D:\jdk-23.0.1\bin\VCRUNTIME140.dll
+0x00007ffdf9e90000 - 0x00007ffdfa02d000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffdf9630000 - 0x00007ffdf9652000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffded660000 - 0x00007ffded8fa000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.4355_none_60b8b9eb71f62e16\COMCTL32.dll
+0x00007ffdfae50000 - 0x00007ffdfaeee000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffdfbc50000 - 0x00007ffdfbc7b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffdf9510000 - 0x00007ffdf9627000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffdf9bb0000 - 0x00007ffdf9c4d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffdfb790000 - 0x00007ffdfb7bf000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffdad2f0000 - 0x00007ffdad2fc000 	D:\jdk-23.0.1\bin\vcruntime140_1.dll
+0x00007ffd98e60000 - 0x00007ffd98eee000 	D:\jdk-23.0.1\bin\msvcp140.dll
+0x00007ffd69150000 - 0x00007ffd69e9f000 	D:\jdk-23.0.1\bin\server\jvm.dll
+0x00007ffdface0000 - 0x00007ffdfad91000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffdfb4f0000 - 0x00007ffdfb58f000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffdfb3c0000 - 0x00007ffdfb4e3000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffdf9960000 - 0x00007ffdf9987000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007ffdfb840000 - 0x00007ffdfb8ab000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffdf8a60000 - 0x00007ffdf8aab000 	C:\WINDOWS\SYSTEM32\POWRPROF.dll
+0x00007ffdeadb0000 - 0x00007ffdeadd7000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffdf2ed0000 - 0x00007ffdf2eda000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffdf88d0000 - 0x00007ffdf88e2000 	C:\WINDOWS\SYSTEM32\UMPDC.dll
+0x00007ffdf7d10000 - 0x00007ffdf7d22000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffd9c4d0000 - 0x00007ffd9c4da000 	D:\jdk-23.0.1\bin\jimage.dll
+0x00007ffdf7b00000 - 0x00007ffdf7ce4000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffdecf80000 - 0x00007ffdecfb4000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffdf9c50000 - 0x00007ffdf9cd2000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffdf22e0000 - 0x00007ffdf231c000 	D:\jdk-23.0.1\bin\jdwp.dll
+0x00007ffdc3500000 - 0x00007ffdc370e000 	C:\Users\grach\AppData\Local\Temp\idea_libasyncProfiler_dll_temp_folder\libasyncProfiler.dll
+0x00007ffdf53f0000 - 0x00007ffdf53ff000 	D:\jdk-23.0.1\bin\instrument.dll
+0x00007ffd87210000 - 0x00007ffd8722e000 	D:\jdk-23.0.1\bin\java.dll
+0x00007ffdfb5f0000 - 0x00007ffdfb71b000 	C:\WINDOWS\System32\ole32.dll
+0x00007ffdfafc0000 - 0x00007ffdfb313000 	C:\WINDOWS\System32\combase.dll
+0x00007ffdfa570000 - 0x00007ffdfacdd000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007ffd870f0000 - 0x00007ffd87107000 	D:\jdk-23.0.1\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;D:\jdk-23.0.1\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.4355_none_60b8b9eb71f62e16;D:\jdk-23.0.1\bin\server;C:\Users\grach\AppData\Local\Temp\idea_libasyncProfiler_dll_temp_folder
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:57151,suspend=y,server=n -agentpath:C:\Users\grach\AppData\Local\Temp\idea_libasyncProfiler_dll_temp_folder\libasyncProfiler.dll=version,jfr,event=wall,interval=10ms,cstack=no,file=C:\Users\grach\IdeaSnapshots\TextAnalysis_2024_12_24_002014.jfr,dbghelppath=C:\Users\grach\AppData\Local\Temp\idea_dbghelp_dll_temp_folder\dbghelp.dll,log=C:\Users\grach\AppData\Local\Temp\TextAnalysis_2024_12_24_002014.jfr.log.txt,logLevel=DEBUG -javaagent:C:\Users\grach\AppData\Local\JetBrains\IntelliJIdea2024.3\captureAgent\debugger-agent.jar=file:/C:/Users/grach/AppData/Local/Temp/capture.props -Dkotlinx.coroutines.debug.enable.creation.stack.trace=false -Ddebugger.agent.enable.coroutines=true -Dkotlinx.coroutines.debug.enable.flows.stack.trace=true -Dkotlinx.coroutines.debug.enable.mutable.state.flows.stack.trace=true -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 
+java_command: org.example.TextAnalysis
+java_class_path (initial): C:\Users\grach\IdeaProjects\untitled1\target\classes;C:\Users\grach\.m2\repository\org\scala-lang\scala-library\2.12.17\scala-library-2.12.17.jar;C:\Users\grach\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\grach\.m2\repository\org\slf4j\slf4j-log4j12\1.7.30\slf4j-log4j12-1.7.30.jar;C:\Users\grach\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;D:\IntelliJ IDEA 2024.3.1.1\lib\idea_rt.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 10                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+   size_t InitialHeapSize                          = 268435456                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4276092928                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5832704                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122945536                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122880000                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 4276092928                             {manageable} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+JAVA_HOME=D:\openlogic-openjdk-8u412-b08-windows-64
+PATH=C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\Git\cmd;C:\php;C:\ProgramData\chocolatey\bin;C:\tools\php83;C:\ProgramData\ComposerSetup\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\dotnet\;C:\Users\grach\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\grach\anaconda3\Library\mingw-w64\bin;C:\Users\grach\anaconda3\Library\usr\bin;C:\Users\grach\anaconda3\Library\bin;C:\Users\grach\anaconda3\Scripts;C:\Users\grach\AppData\Local\Microsoft\WindowsApps;C:\Users\grach\AppData\Roaming\Composer\vendor\bin;C:\Users\grach\.dotnet\tools;D:\openlogic-openjdk-8u412-b08-windows-64\bin;D:\spark-3.5.3\bin;D:\hadoop\bin;D:\apache-maven-3.9.9\bin;
+USERNAME=grach
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
+TMP=C:\Users\grach\AppData\Local\Temp
+TEMP=C:\Users\grach\AppData\Local\Temp
+
+
+
+
+Periodic native trim disabled
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.5198)
+OS uptime: 0 days 8:13 hours
+Hyper-V role detected
+
+CPU: total 12 (initial active 12) (6 cores per cpu, 2 threads per core) family 6 model 158 stepping 10 microcode 0xb4, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, rtm, adx, fma, vzeroupper, clflush, clflushopt, hv, rdtscp, f16c
+Processor Information for the first 12 processors :
+  Max Mhz: 3192, Current Mhz: 3192, Mhz Limit: 3192
+
+Memory: 4k page, system-wide physical 16305M (4008M free)
+TotalPageFile size 24497M (AvailPageFile size 5M)
+current process WorkingSet (physical memory assigned to process): 13M, peak: 13M
+current process commit charge ("private bytes"): 29M, peak: 29M
+
+vm_info: OpenJDK 64-Bit Server VM (23.0.1+11-39) for windows-amd64 JRE (23.0.1+11-39), built on 2024-09-30T07:20:43Z with MS VC++ 17.6 (VS2022)
+
+END.
